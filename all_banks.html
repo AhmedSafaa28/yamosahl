@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Display a map</title>
+    <link rel="stylesheet" href="style.css">
+ <!-- leaflet css  -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@v0.74.0/dist/L.Control.Locate.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@v0.74.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.4/dist/L.Control.Locate.min.css" /><!-- leaflet js  -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.74.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+    <style>
+      #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+      border: red;
+    height: 100%;
+  width:100%}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="navbar">
+
+        </div>
+      </div>
+      <div class="content">
+
+      </div>
+      <div class="
+      "></div>footer
+    </div>
+    <div id="map">    </div>
+    <script>
+      const map = L.map('map').setView([49.2125578, 16.62662018], 14); //starting position
+      L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=AhHxW7EZJl9WwmKTpNzt',{
+        attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+}).addTo(map);
+L.control.locate().addTo(map);
+
+//bank of cario
+//1
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.13220,  31.37794],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//2
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.11171,31.34464],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Banque+Du+Caire+Saint+Fatima+ATM,+78+Abd+El-Aziz+Fahmy,+El-Nozha,+El+Nozha,+Cairo+Governorate/@30.0734792,31.3019307,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145815e65d5d0c0b:0x5dd3e495834962b9!2m2!1d31.3456165!2d30.1049054?entry=ttu >Bank of Cairo</a> ").openPopup();
+//3
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.0072,  31.32095],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Banque+Du+Caire-ATM-%D8%A8%D9%86%D9%83+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9,+54-56+Nazih+Khalifa,+El-Bostan,+Heliopolis,+Cairo+Governorate+4460224%E2%80%AD/@30.0427169,31.2175083,11.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14581588f0bec771:0xbf7ed6e2214dc629!2m2!1d31.3219007!2d30.0967635?entry=ttu >Bank of Cairo</a> ").openPopup();
+//4
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.08379,31.31511],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//5
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.01098,31.45587],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//6
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.06655,31.26361],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//7
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.07071,31.20628],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//8
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.07131,31.23237],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//9
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.05437,31.23821],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//10
+var leafletIcon = L.icon({
+iconUrl: 'https://play-lh.googleusercontent.com/HhYim8AbNzYydv-A22PDbmRvNjXQ7zDVvb0UK_NOwlHEuucO7m0IlJKbuXoAVKyOww',
+iconSize: [30,30 ],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.17824,31.62154],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Cairo+Bank+ATM,+51-62+Street+14,+El+Shorouk,+Cairo+Governorate+4923805/@30.0671737,31.2013981,11.42z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14581d6756494823:0x41b67dbecc3a6819!2m2!1d31.6219966!2d30.1592015?entry=ttu>Bank of Cairo</a> ").openPopup();
+
+//bank of misr
+//1
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.047297164847834,  31.25451343898732],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//2
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.049508455316708,31.246149597619397],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Banque+Du+Caire+Saint+Fatima+ATM,+78+Abd+El-Aziz+Fahmy,+El-Nozha,+El+Nozha,+Cairo+Governorate/@30.0734792,31.3019307,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145815e65d5d0c0b:0x5dd3e495834962b9!2m2!1d31.3456165!2d30.1049054?entry=ttu >Bank of Cairo</a> ").openPopup();
+//3
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.051129368830328,  31.242909864718843],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Banque+Du+Caire-ATM-%D8%A8%D9%86%D9%83+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9,+54-56+Nazih+Khalifa,+El-Bostan,+Heliopolis,+Cairo+Governorate+4460224%E2%80%AD/@30.0427169,31.2175083,11.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14581588f0bec771:0xbf7ed6e2214dc629!2m2!1d31.3219007!2d30.0967635?entry=ttu >Bank of Cairo</a> ").openPopup();
+//4
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.03121751517171, 31.228368746174112],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//5
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.0363378705009,31.23731629683979],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//6
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.048668462202265,31.27193863808133],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//7
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.05060625749409,31.23233073150185],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//8
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.03482465234121,31.23910274709208],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//9
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.060809995169944,31.246140955483675],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//10
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/OIP.eYSPriq1G65WacZU5rTIrQAAAA?pid=ImgDet&rs=1',
+iconSize: [30,30 ],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.05040227806315,31.246209709886887],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Cairo+Bank+ATM,+51-62+Street+14,+El+Shorouk,+Cairo+Governorate+4923805/@30.0671737,31.2013981,11.42z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14581d6756494823:0x41b67dbecc3a6819!2m2!1d31.6219966!2d30.1592015?entry=ttu>Bank of Cairo</a> ").openPopup();
+
+//bank of caib
+//1
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.05284319607105,  31.256546430943477],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//2
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.050685174991777,31.242716533658626],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Banque+Du+Caire+Saint+Fatima+ATM,+78+Abd+El-Aziz+Fahmy,+El-Nozha,+El+Nozha,+Cairo+Governorate/@30.0734792,31.3019307,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145815e65d5d0c0b:0x5dd3e495834962b9!2m2!1d31.3456165!2d30.1049054?entry=ttu >Bank of Cairo</a> ").openPopup();
+//3
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.045834108380255, 31.23641382884479],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Banque+Du+Caire-ATM-%D8%A8%D9%86%D9%83+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9,+54-56+Nazih+Khalifa,+El-Bostan,+Heliopolis,+Cairo+Governorate+4460224%E2%80%AD/@30.0427169,31.2175083,11.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14581588f0bec771:0xbf7ed6e2214dc629!2m2!1d31.3219007!2d30.0967635?entry=ttu >Bank of Cairo</a> ").openPopup();
+//4
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.079402085895854, 31.248337109303673],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//5
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.05782675765641, 31.22517421465802],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//6
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.065926889502176, 31.22139248288547],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//7
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.057013193755076,31.260217192254753],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//8
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.087153647243998,31.307455129535697],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//9
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.04342653765699,31.21714258902999],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//26WR%2BGW4+National+Bank+Of+Egypt+-+ATM,+As+Sahah,+Abdeen,+Cairo+Governorate+4280142/@30.0461629,31.2404296,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0x145841b795e9fb01:0x3b183fd1c7421c43!2m2!1d31.242339!2d30.0462689?entry=ttu >Bank of Cairo</a> ").openPopup();
+//10
+var leafletIcon = L.icon({
+iconUrl: 'https://th.bing.com/th/id/R.d2215d068c8972be465dd3408b667ccb?rik=y589TfVoqBrWtg&riu=http%3a%2f%2fwww.elmens.com%2fwp-content%2fuploads%2f2015%2f03%2fcib-logo-e1426695754376.gif&ehk=NJdnJ%2bdWfYpFt3vePcMWc4JpNyLxrmnqIob09gG0O2Y%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1',
+iconSize: [30,30 ],
+iconAnchor:[22,40],
+popupsAnchor:[12 , -90]
+}) 
+var marker = L.marker ([30.062444686828528,31.246051651628314],{icon:leafletIcon}).addTo(map);
+marker.bindPopup("<a href= https://www.google.com/maps/dir//Cairo+Bank+ATM,+51-62+Street+14,+El+Shorouk,+Cairo+Governorate+4923805/@30.0671737,31.2013981,11.42z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14581d6756494823:0x41b67dbecc3a6819!2m2!1d31.6219966!2d30.1592015?entry=ttu>Bank of Cairo</a> ").openPopup();
+
+</script>
+<div class="ta">
+  <a href="https://www.google.com">asd</a>
+</div> 
+</body>
+</html>
